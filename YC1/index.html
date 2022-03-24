@@ -8,10 +8,13 @@
         <style>
             form{
                 position: relative;
-                left: 40%;
+                margin: auto;
+                border: 1px solid;
+                box-shadow: 5px 5px 2px gray, 7px 7px 4px silver, 10px 10px 6px LightGray, 13px 13px 8px WhiteSmoke;
             }
             .row{
                 display: flex;
+                padding-bottom: 15px;
             }
             .col-1{
                 flex: 1;
@@ -28,14 +31,14 @@
         <!-- Bỏ qua CSS, tập trung JS -->
         <!-- Chia nhỏ vấn đề cần xử lý: 10 vấn đề > 2 vấn đề đàu tiên-->
 
-        <form action="" style="width: 300px;">
-            <h1>Registratrion Form</h1>
+        <form action="" style="width: 450px;">
+            <h1 style="padding-left: 10px;">Registratrion Form</h1>
             <div class="row">
                 <div class="col-1">
                     User ID:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtUserID" id="txtUserID" /><br>
+                    <input type="text" name="txtUserID" id="txtUserID" style="width: 30%"/><br>
                     <span id="statusOfUserID"></span>
                 </div>
             </div>
@@ -49,6 +52,7 @@
                             type="password"
                             name="txtPassword"
                             id="txtPassword"
+                            style="width:30%"
                         /><br>
                         <span id="statusOfPassword"></span>
                     </span>
@@ -60,7 +64,7 @@
                 </div>
                 <div class="col-2">
                     <span>
-                        <input type="text" name="txtName" id="txtName" /><br>
+                        <input type="text" name="txtName" id="txtName" style="width: 80%"/><br>
                         <span id="statusOfName"></span>
                     </span>
                 </div>
@@ -70,7 +74,7 @@
                     Address:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtAddress" id="">
+                    <input type="text" name="txtAddress" id="" style="width: 80%">
                 </div>
             </div>
             <div class="row">
@@ -92,7 +96,7 @@
                     ZIP Code:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtZipCode" id="txtZipCode"><br>
+                    <input type="text" name="txtZipCode" id="txtZipCode" style="width:40%"><br>
                     <span id="statusOfZipCode"></span>
                 </div>
             </div>
@@ -101,7 +105,7 @@
                     Email:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtEmail" id="txtEmail"><br>
+                    <input type="text" name="txtEmail" id="txtEmail" style="width:80%"><br>
                     <span id="statusOfEmail"></span>
                 </div>
             </div>
@@ -126,9 +130,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-1">About:</div>
+                <div class="col-1" style="padding-left: 3px;">About:</div>
                 <div class="col-2">
-                    <input type="text" name="txtAbout" id="txtAbout" style="height: 100px;">
+                    <textarea name="message" rows="10" cols="30" style="height: 100px; width: 90%;"></textarea>
+                    <!-- <input type="text" name="txtAbout" id="txtAbout" style="height: 100px;"> -->
                 </div>
             </div>
             <div class="row" style="justify-content: center;">
@@ -136,7 +141,7 @@
                     type="submit"
                     name="btnRegister"
                     id="btnRegister"
-                    value="Register"
+                    value="Submit"
                     disabled
                 />
             </div>

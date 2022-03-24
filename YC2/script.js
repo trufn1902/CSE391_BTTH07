@@ -39,6 +39,16 @@ $(document).ready(function () {
         return false;
     }
 
+    function checkEmail(){
+        // Cách 02: dùng BTCQ: [1, +duongvocung]
+        let Email = $("#txtEmail").val();
+        let EmailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        if (EmailRegex.test(Email)) {
+            return true;
+        }
+        return false;
+    }
+
     $("#btnRegister").click(function (e) {
         e.preventDefault();
         if(checkUserId()){
@@ -71,6 +81,14 @@ $(document).ready(function () {
         } else {
             $("#statusOfZipCode").text("ZipCode không hợp lệ");
             $("#statusOfZipCode").css("color", "red");
+        }
+
+        if (checkEmail()) {
+            $("#statusOfEmail").text("Email hợp lệ");
+            $("#statusOfEmail").css("color", "blue");
+        } else {
+            $("#statusOfEmail").text("Email không hợp lệ");
+            $("#statusOfEmail").css("color", "red");
         }
         // console.log('abc')
 

@@ -29,6 +29,16 @@ $(document).ready(function () {
         return false;
     }
 
+    function checkZipCode() {
+        // Cách 02: dùng BTCQ: [1, +duongvocung]
+        let ZipCode = $("#txtZipCode").val();
+        let ZipCodeRegex = /^[Z0-9]{1,}$/
+        if (ZipCodeRegex.test(ZipCode)) {
+            return true;
+        }
+        return false;
+    }
+
     $("#btnRegister").click(function (e) {
         e.preventDefault();
         if(checkUserId()){
@@ -54,7 +64,16 @@ $(document).ready(function () {
             $("#statusOfName").text("Tên không hợp lệ");
             $("#statusOfName").css("color", "red");
         }
+
+        if (checkZipCode()) {
+            $("#statusOfZipCode").text("ZipCode hợp lệ");
+            $("#statusOfZipCode").css("color", "blue");
+        } else {
+            $("#statusOfZipCode").text("ZipCode không hợp lệ");
+            $("#statusOfZipCode").css("color", "red");
+        }
         // console.log('abc')
 
+        
     });
 });

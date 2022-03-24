@@ -8,6 +8,16 @@ $(document).ready(function () {
         }
         return false;
     }
+
+    function checkPassword(){
+        // Cách 02: dùng BTCQ: [1, +duongvocung]
+        let password = $('#txtPassword').val();
+        let passwordRegex = /^[a-zA-Z0-9]{7,12}$/;
+        if(passwordRegex.test(password)){
+            return true
+        }
+        return false
+    }
     
     function checkName() {
         // Cách 02: dùng BTCQ: [1, +duongvocung]
@@ -28,6 +38,14 @@ $(document).ready(function () {
             $("#statusOfUserID").text('UserID không hợp lệ')
             $("#statusOfUserID").css('color','red')
         }
+
+        if(checkPassword()){
+            $("#statusOfPassword").text('Password hợp lệ')
+            $("#statusOfPassword").css('color','blue')
+        }else{
+            $("#statusOfPassword").text('Password không hợp lệ')
+            $("#statusOfPassword").css('color','red')
+        }
         
         if (checkName()) {
             $("#statusOfName").text("Tên hợp lệ");
@@ -37,5 +55,6 @@ $(document).ready(function () {
             $("#statusOfName").css("color", "red");
         }
         // console.log('abc')
+
     });
 });

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Registration</title>
+    </head>
+    <body>
+        <!-- Chia để trị -->
+        <!-- Bỏ qua CSS, tập trung JS -->
+        <!-- Chia nhỏ vấn đề cần xử lý: 10 vấn đề > 2 vấn đề đàu tiên-->
+
+        <form action="">
+            <div class="row">
+                <div class="col">User ID:</div>
+                <div class="col">
+                    <input type="text" name="txtUserID" id="txtUserID" />
+                    <span id="statusOfUserID"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">Password:</div>
+                <div class="col">
+                    <input
+                        type="password"
+                        name="txtPassword"
+                        id="txtPassword"
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">Name:</div>
+                <div class="col">
+                    <input type="text" name="txtName" id="txtName"/>
+                    <span id="statusOfName"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">Country:</div>
+                <div class="col">
+                    <select name="countries" id="countries">
+                        <option value="VietNam">Việt Nam</option>
+                        <option value="Korea">Hàn Quốc</option>
+                        <option value="Japan">Nhật Bản</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" name="btnRegister" id="btnRegister" value="Register"/>
+                </div>
+            </div>
+        </form>
+
+        <!-- Script -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -15,6 +15,7 @@
             }
             .col-1{
                 flex: 1;
+                padding-right: 5px;
                 text-align: right;
             }
             .col-2{
@@ -78,11 +79,12 @@
                 </div>
                 <div class="col-2">
                     <select name="countries" id="countries">
+                        <option value="">(Please select a country)</option>
                         <option value="VietNam">Việt Nam</option>
                         <option value="Korea">Hàn Quốc</option>
                         <option value="Japan">Nhật Bản</option>
                     </select><br>
-                    <span id="statusOsCountry"></span>
+                    <span id="statusOfCountry"></span>
                 </div>
             </div>
             <div class="row">
@@ -135,6 +137,7 @@
                     name="btnRegister"
                     id="btnRegister"
                     value="Register"
+                    disabled
                 />
             </div>
         </form>

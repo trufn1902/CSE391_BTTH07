@@ -39,6 +39,3 @@ $(document).ready(function () {
         // console.log('abc')
     });
 });
-
-// let result = /^techtuts$/.test("techtuts techtuts");
-// console.log(result); // False

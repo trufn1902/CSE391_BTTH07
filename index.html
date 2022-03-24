@@ -5,51 +5,137 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Form Registration</title>
+        <style>
+            form{
+                position: relative;
+                left: 40%;
+            }
+            .row{
+                display: flex;
+            }
+            .col-1{
+                flex: 1;
+                text-align: right;
+            }
+            .col-2{
+                flex: 3;
+            }
+        </style>
     </head>
     <body>
         <!-- Chia để trị -->
         <!-- Bỏ qua CSS, tập trung JS -->
         <!-- Chia nhỏ vấn đề cần xử lý: 10 vấn đề > 2 vấn đề đàu tiên-->
 
-        <form action="">
+        <form action="" style="width: 300px;">
+            <h1>Registratrion Form</h1>
             <div class="row">
-                <div class="col">User ID:</div>
-                <div class="col">
-                    <input type="text" name="txtUserID" id="txtUserID" />
+                <div class="col-1">
+                    User ID:
+                </div>
+                <div class="col-2">
+                    <input type="text" name="txtUserID" id="txtUserID" /><br>
                     <span id="statusOfUserID"></span>
                 </div>
             </div>
             <div class="row">
-                <div class="col">Password:</div>
-                <div class="col">
-                    <input
-                        type="password"
-                        name="txtPassword"
-                        id="txtPassword"
-                    />
+                <div class="col-1">
+                    Password:
+                </div>
+                <div class="col-2">
+                    <span>
+                        <input
+                            type="password"
+                            name="txtPassword"
+                            id="txtPassword"
+                        /><br>
+                        <span id="statusOfPassword"></span>
+                    </span>
                 </div>
             </div>
             <div class="row">
-                <div class="col">Name:</div>
-                <div class="col">
-                    <input type="text" name="txtName" id="txtName"/>
-                    <span id="statusOfName"></span>
+                <div class="col-1">
+                    Name:
+                </div>
+                <div class="col-2">
+                    <span>
+                        <input type="text" name="txtName" id="txtName" /><br>
+                        <span id="statusOfName"></span>
+                    </span>
                 </div>
             </div>
             <div class="row">
-                <div class="col">Country:</div>
-                <div class="col">
+                <div class="col-1">
+                    Address:
+                </div>
+                <div class="col-2">
+                    <input type="text" name="txtAddress" id="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    Country:
+                </div>
+                <div class="col-2">
                     <select name="countries" id="countries">
                         <option value="VietNam">Việt Nam</option>
                         <option value="Korea">Hàn Quốc</option>
                         <option value="Japan">Nhật Bản</option>
-                    </select>
+                    </select><br>
+                    <span id="statusOsCountry"></span>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <input type="submit" name="btnRegister" id="btnRegister" value="Register"/>
+                <div class="col-1">
+                    ZIP Code:
                 </div>
+                <div class="col-2">
+                    <input type="text" name="txtZipCode" id="txtZipCode"><br>
+                    <span id="statusOfZipCode"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    Email:
+                </div>
+                <div class="col-2">
+                    <input type="text" name="txtEmail" id="txtEmail"><br>
+                    <span id="statusOfEmail"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">Sex:</div>
+                <div class="col-2">
+                    <input type="radio" name="txtSex" id="sexMale" value="Male">
+                    <label for="sexMale">Male</label>
+                    <input type="radio" name="txtSex" id="sexFemale" value="Female">
+                    <label for="sexFemale">Female</label><br>
+                    <span id="statusOfSex"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">Language:</div>
+                <div class="col-2">
+                    <input type="checkbox" name="language" id="langEng">
+                    <label for="langEng">English</label>
+                    <input type="checkbox" name="language" id="langNonEng">
+                    <label for="langNonEng">Non English</label><br>
+                    <span id="statusOfLanguage"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">About:</div>
+                <div class="col-2">
+                    <input type="text" name="txtAbout" id="txtAbout" style="height: 100px;">
+                </div>
+            </div>
+            <div class="row" style="justify-content: center;">
+                <input
+                    type="submit"
+                    name="btnRegister"
+                    id="btnRegister"
+                    value="Register"
+                />
             </div>
         </form>
 

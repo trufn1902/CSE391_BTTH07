@@ -67,7 +67,7 @@ name.addEventListener('focusout', () =>{
 
 // Country
 
-let country = document.getElementsByName('countries')[0]
+let country = document.getElementById('countries')
 let statusOfCountry = document.getElementById('statusOfCountry')
 let checkCountry = false
 
@@ -89,7 +89,7 @@ let statusOfZipCode = document.getElementById('statusOfZipCode')
 let checkZIPCode = false
 
 zipCode.addEventListener('focusout', () =>{
-    let zipCodeRegex = /^[0-9]{1,}$/
+    let zipCodeRegex = /^[0-9]+$/
 
     if (zipCodeRegex.test(zipCode.value)){
         statusOfZipCode.textContent = 'ZIP Code hợp lệ'
@@ -159,10 +159,6 @@ language.forEach(lang =>{
         }
     })
 })
-
-// let btnRegister = document.getElementById('btnRegister')
-if (checkCountry && checkEmail && checkLanguage && checkName && checkPassword && checkUser && checkZIPCode)
-    enableBtn()
 
 // console.log(checkCountry, checkEmail, checkLanguage, checkName, checkPassword, checkUser, checkZIPCode)
 setInterval(() =>{

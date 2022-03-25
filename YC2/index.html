@@ -38,7 +38,7 @@
                     User ID:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtUserID" id="txtUserID" style="width: 30%"/><br>
+                    <input type="text" placeholder="Must be of lengt 5 to 12" name="txtUserID" id="txtUserID" style="width: 45%"/><br>
                     <span id="statusOfUserID"></span>
                 </div>
             </div>
@@ -50,9 +50,10 @@
                     <span>
                         <input
                             type="password"
+                            placeholder="Must be of lengt 7 to 12"
                             name="txtPassword"
                             id="txtPassword"
-                            style="width:30%"
+                            style="width:45%"
                         /><br>
                         <span id="statusOfPassword"></span>
                     </span>
@@ -64,7 +65,7 @@
                 </div>
                 <div class="col-2">
                     <span>
-                        <input type="text" name="txtName" id="txtName" style="width: 80%"/><br>
+                        <input type="text" placeholder="Alphabates only" name="txtName" id="txtName" style="width: 80%"/><br>
                         <span id="statusOfName"></span>
                     </span>
                 </div>
@@ -74,7 +75,7 @@
                     Address:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtAddress" id="" style="width: 80%">
+                    <input type="text" placeholder="Optional" name="txtAddress" id="" style="width: 80%">
                 </div>
             </div>
             <div class="row">
@@ -96,7 +97,7 @@
                     ZIP Code:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtZipCode" id="txtZipCode" style="width:40%"><br>
+                    <input type="text" placeholder="Must be numeric only" name="txtZipCode" id="txtZipCode" style="width:50%"><br>
                     <span id="statusOfZipCode"></span>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                     Email:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtEmail" id="txtEmail" style="width:80%"><br>
+                    <input type="text" placeholder="Must be a valid email" name="txtEmail" id="txtEmail" style="width:80%"><br>
                     <span id="statusOfEmail"></span>
                 </div>
             </div>
@@ -132,7 +133,7 @@
             <div class="row">
                 <div class="col-1" style="padding-left: 3px;">About:</div>
                 <div class="col-2">
-                    <textarea name="message" rows="10" cols="30" style="height: 100px; width: 90%;"></textarea>
+                    <textarea placeholder="Optional" name="message" rows="10" cols="30" style="height: 100px; width: 90%;"></textarea>
                     <!-- <input type="text" name="txtAbout" id="txtAbout" style="height: 100px;"> -->
                 </div>
             </div>
@@ -142,6 +143,7 @@
                     name="btnRegister"
                     id="btnRegister"
                     value="Submit"
+                    disabled
                 />
             </div>
         </form>

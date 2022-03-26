@@ -5,38 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Form Registration</title>
-        <style>
-            form{
-                position: relative;
-                left: 40%;
-            }
-            .row{
-                display: flex;
-                padding: 2px;
-            }
-            .col-1{
-                flex: 1;
-                padding-right: 5px;
-                text-align: right;
-            }
-            .col-2{
-                flex: 3;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!-- Chia để trị -->
         <!-- Bỏ qua CSS, tập trung JS -->
         <!-- Chia nhỏ vấn đề cần xử lý: 10 vấn đề > 2 vấn đề đàu tiên-->
 
-        <form action="" style="width: 300px;">
-            <h1>Registratrion Form</h1>
+        <form action="" style="width: 450px;">
+            <h1 style="padding-left: 10px;">Registratrion Form</h1>
             <div class="row">
                 <div class="col-1">
                     User ID:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtUserID" id="txtUserID" /><br>
+                    <input type="text" placeholder="Must be of lengt 5 to 12" name="txtUserID" id="txtUserID" style="width: 45%"/><br>
                     <span id="statusOfUserID"></span>
                 </div>
             </div>
@@ -48,8 +31,10 @@
                     <span>
                         <input
                             type="password"
+                            placeholder="Must be of lengt 7 to 12"
                             name="txtPassword"
                             id="txtPassword"
+                            style="width:45%"
                         /><br>
                         <span id="statusOfPassword"></span>
                     </span>
@@ -61,7 +46,7 @@
                 </div>
                 <div class="col-2">
                     <span>
-                        <input type="text" name="txtName" id="txtName" /><br>
+                        <input type="text" placeholder="Alphabates only" name="txtName" id="txtName" style="width: 80%"/><br>
                         <span id="statusOfName"></span>
                     </span>
                 </div>
@@ -71,7 +56,7 @@
                     Address:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtAddress" id="">
+                    <input type="text" placeholder="Optional" name="txtAddress" id="" style="width: 80%">
                 </div>
             </div>
             <div class="row">
@@ -93,7 +78,7 @@
                     ZIP Code:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtZipCode" id="txtZipCode"><br>
+                    <input type="text" placeholder="Must be numeric only" name="txtZipCode" id="txtZipCode" style="width:50%"><br>
                     <span id="statusOfZipCode"></span>
                 </div>
             </div>
@@ -102,7 +87,7 @@
                     Email:
                 </div>
                 <div class="col-2">
-                    <input type="text" name="txtEmail" id="txtEmail"><br>
+                    <input type="text" placeholder="Must be a valid email" name="txtEmail" id="txtEmail" style="width:80%"><br>
                     <span id="statusOfEmail"></span>
                 </div>
             </div>
@@ -127,9 +112,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-1">About:</div>
+                <div class="col-1" style="padding-left: 3px;">About:</div>
                 <div class="col-2">
-                    <textarea name="txtAbout" id="txtAbout" cols="22" rows="7"></textarea>
+                    <textarea placeholder="Optional" name="message" rows="10" cols="30" style="height: 100px; width: 90%;"></textarea>
+                    <!-- <input type="text" name="txtAbout" id="txtAbout" style="height: 100px;"> -->
                 </div>
             </div>
             <div class="row" style="justify-content: center;">
@@ -137,7 +123,7 @@
                     type="submit"
                     name="btnRegister"
                     id="btnRegister"
-                    value="Register"
+                    value="Submit"
                     disabled
                 />
             </div>
@@ -151,4 +137,3 @@
         ></script>
         <script src="script.js"></script>
     </body>
-</html>

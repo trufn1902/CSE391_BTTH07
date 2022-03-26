@@ -1,0 +1,19 @@
+form{
+    position: relative;
+    margin: auto;
+    border: 1px solid;
+    border: none;
+    box-shadow: 5px 5px 10px 5px grey;
+}
+.row{
+    display: flex;
+    padding-bottom: 15px;
+}
+.col-1{
+    flex: 1;
+    padding-right: 5px;
+    text-align: right;
+}
+.col-2{
+    flex: 3;
+}

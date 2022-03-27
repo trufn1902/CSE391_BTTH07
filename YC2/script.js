@@ -142,7 +142,7 @@ $(document).ready(() =>{
         }
         else{
             $('#statusOfLanguage').text('Vui lòng chọn ngôn ngữ')
-            $('#statusOfSex').css('color', 'red')
+            $('#statusOfLanguage').css('color', 'red')
             checkLanguage = false
         }  
     })
@@ -153,7 +153,7 @@ $(document).ready(() =>{
         }
         else{
             $('#statusOfLanguage').text('Vui lòng chọn ngôn ngữ')
-            $('#statusOfSex').css('color', 'red')
+            $('#statusOfLanguage').css('color', 'red')
             checkLanguage = false
         }  
     })
